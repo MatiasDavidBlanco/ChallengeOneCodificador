@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/Vector (8).png" type="image/x-icon">
+    <title>Encriptador</title>
+</head>
+<body>
+    <div class="encriptar-section">
+        <div class="titulo-container">
+            <img class="logo" src="img/alura.svg" alt="logo">
+            <h1>Encriptador</h1>
+        </div>
+        
+        <textarea id="text-input" rows="4" cols="50" placeholder="Ingrese el texto aqui"></textarea>
+        <div class="info-container">  
+            <img src="img/alert.svg">
+            <p>Sólo letras minúsculas y sin acentos</p>
+        </div>
+        <div class="btn-container">
+            <button onclick="encriptar()" class="btn-1">Encriptar</button>
+            <button onclick="desencriptar()" class="btn-2">Desencriptar</button>
+            <p>Sitio desarrollado por Matias Blanco</p>
+        </div>
+    </div>
+    <div class="desencriptar-section">
+        <div id="text-outputOn"></div>
+        <button id="copiar-btn" onclick="copiarAlPortapapeles()"  class="btn-2">Copiar</button>
+        <div id="text-outputOff">
+            <img src="img/muñeco.svg" alt="">
+            <h2>Ningún mensaje fue encontrado</h2>
+            <br>
+            <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
