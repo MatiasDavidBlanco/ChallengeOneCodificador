@@ -5,13 +5,11 @@ var textoDescifrado="";
 function stop(event){
     event.preventDefault()
 };
-
 function encriptar (){
     texto= document.getElementById("text-input").value
     if (texto==""){
         alert("Ingrese un texto para encriptar")
         stop();
-       
     }
     if (texto.search(/[A-Z]/g) > -1 || texto.search(/([áéíóúü])+/g) > -1 || texto.search(/[^A-z\s\d][\\\^]?/g) > -1) {
         alert("No se aceptan letras en minuscula, acentos ni carácteres especiales");
@@ -23,15 +21,10 @@ function encriptar (){
         document.getElementById("text-input").value= "";
     }
 }
-
-
 function desencriptar(){
- 
     textoDescifrado = textoCifrado.replace(/(enter)/gi,"e").replace(/(imes)/gi,"i").replace(/(ai)/gi,"a").replace(/(ober)/gi,"o").replace(/(ufat)/gi,"u");
     document.getElementById("text-outputOn").innerHTML = textoDescifrado;
     document.getElementById("copiar-btn").style.display= "block"
-    
-  
 }
 function copiarAlPortapapeles() {
         navigator.clipboard
@@ -39,6 +32,4 @@ function copiarAlPortapapeles() {
             .then(
                 success => alert("COPIADO!"), err => alert("error copying text")
             );
-  }
-
-
+}
