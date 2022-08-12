@@ -30,6 +30,6 @@ function copiarAlPortapapeles() {
         navigator.clipboard
             .writeText(document.getElementById('text-outputOn').innerText)
             .then(
-                success => alert("COPIADO!"), err => alert("error copying text")
+                success => console.log("COPIADO!"), err => console.log("error copying text")
             );
 }
